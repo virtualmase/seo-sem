@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEO/SEM Specialist Portfolio | Mason Nguyen</title>
+    <!-- SEO Meta Description: Highlight key skills and value proposition for Mason Nguyen -->
+    <meta name="description" content="Mason Nguyen: Proven SEO/SEM Specialist with expertise in Google Analytics, Google Ads, SEMRush, and elevating digital performance. Available for Dallas/Fort Worth roles.">
+    <meta name="keywords" content="SEO, SEM, Google Analytics, Google Ads, SEMRush, Digital Marketing, PPC, Organic Search, Dallas, Fort Worth, Portfolio, Specialist, UTM Codes, Google Tag Manager, Client-Facing, Mason Nguyen">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* Custom CSS variables for consistent theming */
+        :root {
+            --c-dark: #0a0a14;
+            --c-purple: #8A2BE2;
+            --c-blue: #00BFFF;
+            --c-light: #E0E7FF;
+            --c-gray: #4B5563;
+        }
+
+        /* Base body styling with Inter font and dark background */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--c-dark);
+            color: var(--c-light);
+            /* Subtle radial gradients for background visual interest */
+            background-image:
+                radial-gradient(at 10% 20%, hsla(280, 80%, 50%, 0.2) 0px, transparent 50%),
+                radial-gradient(at 90% 80%, hsla(200, 90%, 50%, 0.2) 0px, transparent 50%);
+        }
+
+        /* Monospaced font for headings and specific elements for a tech-savvy feel */
+        h1, h2, h3, .font-mono {
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        /* Glassmorphism effect for panels, providing a modern, transparent look */
+        .glass-panel {
+            background: rgba(16, 16, 28, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 191, 255, 0.15);
+        }
+
+        /* Primary button styling with gradient, shadow, and hover effects */
+        .primary-button {
+            background: linear-gradient(90deg, var(--c-purple), var(--c-blue));
+            color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(138, 43, 226, 0.4);
+        }
+        .primary-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px rgba(0, 191, 255, 0.6);
+        }
+
+        /* Container for canvas elements, providing a consistent visual space */
+        .canvas-container {
+            width: 100%;
+            height: 12rem; /* Fixed height for visual consistency */
+            background-color: rgba(10, 10, 20, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-bottom: 1px solid rgba(0, 191, 255, 0.15);
+        }
+        /* Canvas element itself, ensuring it fills its container */
+        canvas {
+            display: block;
+        }
+
+        /* Keyframe animation for the signal strength bar */
+        @keyframes pulse-sync {
+            0% { transform: scaleX(0.2); opacity: 0.5; }
+            50% { transform: scaleX(1); opacity: 1; }
+            100% { transform: scaleX(0.2); opacity: 0.5; }
+        }
+
+        /* Apply animation to the signal bar */
+        .signal-bar {
+            animation: pulse-sync 2s infinite ease-in-out;
+            transform-origin: left center;
+        }
+
+        /* Specific styling for the iframe container to maintain aspect ratio */
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio (height / width = 9 / 16 = 0.5625) */
+            height: 0;
+            overflow: hidden;
+            border-radius: 0.5rem;
+            border: 1px solid rgba(0, 191, 255, 0.3);
+            box-shadow: 0 4px 20px rgba(0, 191, 255, 0.2);
+            background-color: #000; /* Fallback background for iframe area */
+        }
+
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navbar: Sticky navigation for easy access to sections -->
+    <nav class="glass-panel p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold font-mono flex items-center gap-2">
+                <span class="text-blue-400">Δ</span>
+                <span>MASON NGUYEN | SEO/SEM PORTFOLIO</span>
+            </a>
+            <div class="hidden md:flex space-x-6 text-sm font-mono">
+                <a href="#about" class="text-gray-300 hover:text-blue-400 transition-colors">ABOUT</a>
+                <a href="#skills" class="text-gray-300 hover:text-blue-400 transition-colors">EXPERTISE</a>
+                <a href="#casestudies" class="text-gray-300 hover:text-blue-400 transition-colors">CASE STUDIES</a>
+                <a href="#insights" class="text-gray-300 hover:text-blue-400 transition-colors">LIVE INSIGHTS</a>
+                <a href="#contact" class="text-gray-300 hover:text-blue-400 transition-colors">CONTACT</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section: Introduction to the SEO/SEM Specialist -->
+    <header class="text-white py-24 md:py-32 px-4">
+        <div class="container mx-auto text-center">
+            <!-- Profile Icon: Placeholder for a professional headshot or relevant icon -->
+            <img src="https://placehold.co/150x150/0a0a14/00BFFF?text=MN" alt="Mason Nguyen Profile" class="w-36 h-36 rounded-full mx-auto mb-6 border-4 border-blue-400/50 shadow-lg shadow-purple-500/20">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">
+                SEO/SEM Specialist: <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">Mason Nguyen</span>
+            </h1>
+            <p class="text-lg md:text-xl font-light max-w-3xl mx-auto mb-4 text-gray-300">
+                Elevating organic visibility and paid campaign performance through data-driven strategies and advanced analytics.
+            </p>
+            <!-- Performance Sync Bar: Visual representation of continuous optimization -->
+            <div class="flex items-center justify-center space-x-2 mb-8">
+                <div class="w-24 h-2 bg-blue-600 rounded-full signal-bar"></div>
+                <span class="text-sm font-mono text-blue-400">PERFORMANCE SYNC: 98.7%</span>
+            </div>
+
+            <p class="text-lg md:text-xl font-light max-w-3xl mx-auto mb-10 text-gray-300">
+                Driving verifiable results in search engine optimization and marketing, ensuring maximum ROI and sustained digital growth.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 mb-10">
+                <a href="#casestudies" class="primary-button inline-block px-6 py-3 rounded-full font-bold text-base">View Case Studies</a>
+                <a href="#skills" class="primary-button inline-block px-6 py-3 rounded-full font-bold text-base">Explore Expertise</a>
+                <a href="#contact" class="primary-button inline-block px-6 py-3 rounded-full font-bold text-base">Connect Now</a>
+            </div>
+            <a href="#casestudies" class="primary-button inline-block px-8 py-4 rounded-full font-bold text-lg">See My Impact</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+
+        <!-- About Section: Professional Introduction -->
+        <section id="about" class="glass-panel p-8 md:p-12 mb-16 rounded-xl shadow-2xl shadow-blue-500/10">
+            <h2 class="text-4xl font-bold text-center mb-8">About Me: Architecting Digital Growth</h2>
+            <div class="max-w-3xl mx-auto text-lg leading-relaxed text-gray-300">
+                <p class="mb-4">
+                    As a results-driven <strong>SEO/SEM Specialist</strong>, I empower organizations to achieve significant online growth by transforming complex digital challenges into clear, actionable strategies. My expertise encompasses the strategic design and implementation of advanced digital marketing initiatives, ensuring enhanced online visibility and measurable business outcomes. I am passionate about crafting robust, data-driven marketing frameworks that not only elevate brand presence but also consistently deliver maximum ROI in highly competitive digital environments.
+                </p>
+                <p class="mb-4">
+                    I excel at extracting critical insights from platforms like <strong>Google Analytics</strong> and <strong>SEMRush</strong>, translating intricate data into powerful, actionable SEO and SEM solutions. My approach seamlessly integrates proven content strategies with cutting-edge tools, including <strong>Google Tag Manager</strong> for precise tracking and <strong>Google Ads</strong> for optimized paid campaigns. My core mission is to develop dynamic digital systems that continuously adapt to market shifts, prioritize discoverability and conversion, and foster sustainable impact.
+                </p>
+                <p>
+                    Committed to radical transparency, I leverage performance metrics and deep analytical insights to drive client success. I thrive on proactively addressing the evolving landscape of search algorithms and market trends, consistently exploring innovative strategies to carve out new opportunities in the digital frontier. My unwavering commitment ensures that critical online infrastructure not only withstands the demands of future market dynamics but consistently delivers verifiable, impactful results.
+                </p>
+            </div>
+        </section>
+
+        <!-- Skills Section: Detailed Expertise -->
+        <section id="skills" class="mb-16">
+            <h2 class="text-4xl font-bold text-center text-white mb-12">Core Competencies: SEO/SEM Expertise</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                <!-- Each div represents a key skill -->
+                <div class="glass-panel p-6 rounded-lg flex items-center space-x-4 transform transition duration-300 hover:-translate-y-1 hover:border-purple-500/50">
+                    <img src="https://placehold.co/40x40/8A2BE2/E0E7FF?text=SEO" alt="SEO & Content Strategy Icon" class="rounded-full">
+                    <span class="text-lg font-semibold text-gray-200">SEO & Content Strategy</span>
+                </div>
+                <div class="glass-panel p-6 rounded-lg flex items-center space-x-4 transform transition duration-300 hover:-translate-y-1 hover:border-purple-500/50">
+                    <img src="https://placehold.co/40x40/8A2BE2/E0E7FF?text=TEC" alt="Technical SEO & Site Health Icon" class="rounded-full">
+                    <span class="text-lg font-semibold text-gray-200">Technical SEO & Site Health</span>
+                </div>
+                <div class="glass-panel p-6 rounded-lg flex items-center space-x-4 transform transition duration-300 hover:-translate-y-1 hover:border-purple-500/50">
+                    <img src="https://placehold.co/40x40/8A2BE2/E0E7FF?text=KWR" alt="Keyword Research & SERP Analysis Icon" class="rounded-full">
+                    <span class="text-lg font-semibold text-gray-200">Keyword Research & SERP Analysis</span>
+                </div>
+                <div class="glass-panel p-6 rounded-lg flex items-center space-x-4 transform transition duration-300 hover:-translate-y-1 hover:border-purple-500/50">
+                    <img src="https://placehold.co/40x40/8A2BE2/E0E7FF?text=ANA" alt="Analytics & Performance Auditing Icon" class="rounded-full">
+                    <span class="text-lg font-semibold text-gray-200">Analytics & Performance Auditing</span>
+                </div>
+                <div class="glass-panel p-6 rounded-lg flex items-center space-x-4 transform transition duration-300 hover:-translate-y-1 hover:border-blue-500/50">
+                    <img src="https://placehold.co/40x40/00BFFF/0a0a14?text=PPC" alt="PPC Campaign Management Icon" class="rounded-full">
+                    <span class="text-lg font-semibold text-gray-200">PPC Campaign Management</span>
+                </div>
+                <div class="glass-panel p-6 rounded-lg flex items-center space-x-4 transform transition duration-300 hover:-translate-y-1 hover:border-blue-500/50">
+                    <img src="https://placehold.co/40x40/00BFFF/0a0a14?text=GTM" alt="Google Tag Manager Implementation Icon" class="rounded-full">
+                    <span class="text-lg font-semibold text-gray-200">Google Tag Manager Implementation</span>
+                </div>
+                <div class="glass-panel p-6 rounded-lg flex items-center space-x-4 transform transition duration-300 hover:-translate-y-1 hover:border-blue-500/50">
+                    <img src="https://placehold.co/40x40/00BFFF/0a0a14?text=CLI" alt="Client-Facing & Presentation Icon" class="rounded-full">
+                    <span class="text-lg font-semibold text-gray-200">Client-Facing & Presentation</span>
+                </div>
+                <div class="glass-panel p-6 rounded-lg flex items-center space-x-4 transform transition duration-300 hover:-translate-y-1 hover:border-blue-500/50">
+                    <img src="https://placehold.co/40x40/00BFFF/0a0a14?text=UTM" alt="UTM Tracking & Attribution Icon" class="rounded-full">
+                    <span class="text-lg font-semibold text-gray-200">UTM Tracking & Attribution</span>
+                </div>
+            </div>
+            <!-- Added a dedicated section for Tools & Technologies -->
+            <div class="mt-12 text-center max-w-3xl mx-auto">
+                <h3 class="text-3xl font-bold text-blue-400 mb-6">Tools & Technologies</h3>
+                <p class="text-gray-300 text-lg mb-4">
+                    Proficient in leveraging industry-leading platforms to drive and measure digital marketing success:
+                </p>
+                <div class="flex flex-wrap justify-center gap-4 text-xl text-gray-200">
+                    <span class="glass-panel px-4 py-2 rounded-full">Google Analytics (GA4 & UA)</span>
+                    <span class="glass-panel px-4 py-2 rounded-full">Google Ads</span>
+                    <span class="glass-panel px-4 py-2 rounded-full">SEMRush</span>
+                    <span class="glass-panel px-4 py-2 rounded-full">Google Tag Manager</span>
+                    <span class="glass-panel px-4 py-2 rounded-full">Google Search Console</span>
+                    <span class="glass-panel px-4 py-2 rounded-full">Looker Studio (Google Data Studio)</span>
+                    <span class="glass-panel px-4 py-2 rounded-full">Ahrefs / Moz (familiarity)</span>
+                    <span class="glass-panel px-4 py-2 rounded-full">Screaming Frog SEO Spider</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Studies Section: Showcasing Projects with SEO/SEM Focus -->
+        <section id="casestudies" class="mb-16">
+            <h2 class="text-4xl font-bold text-center text-white mb-12">Case Studies & Campaign Experience</h2>
+            <div class="max-w-6xl mx-auto">
+
+                <!-- Flagship Project: Coreweaver Portal -->
+                <div class="glass-panel p-8 md:p-10 mb-12 rounded-xl shadow-2xl shadow-blue-500/20">
+                    <h3 class="text-3xl font-bold text-blue-400 mb-4 text-center">Flagship Project: Coreweaver Portal</h3>
+                    <p class="text-gray-300 text-lg mb-6 text-center max-w-4xl mx-auto">
+                        A comprehensive digital ecosystem designed to centralize and visualize complex data streams, enabling real-time performance monitoring and data-driven decision-making for SEO/SEM strategies.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                        <div>
+                            <p class="text-gray-400 text-base mb-4">
+                                <strong>Challenge:</strong> Consolidating disparate data sources from various marketing channels and analytics platforms into a single, actionable view for stakeholders. The goal was to provide real-time insights to optimize SEO and SEM efforts effectively.
+                            </p>
+                            <p class="text-gray-400 text-base mb-4">
+                                <strong>Solution:</strong> Developed and implemented the Coreweaver Portal, an integrated platform that aggregates data from Google Analytics, Google Ads, and other marketing tools. The portal features interactive dashboards for traffic, conversions, and ROI, alongside a live feed for immediate performance signals.
+                            </p>
+                            <p class="text-gray-400 text-base mb-4">
+                                <strong>Impact:</strong> Significantly improved the speed and accuracy of performance analysis, leading to faster identification of optimization opportunities. Enhanced client understanding of complex data, fostering greater trust and collaboration. This project demonstrates advanced capabilities in data integration, visualization, and real-time strategic adaptation for digital marketing.
+                            </p>
+                            <a href="https://coreweaver-portal.vercel.app/" target="_blank" class="text-blue-400 hover:underline font-medium inline-flex items-center font-mono text-sm mt-4">
+                                Explore Coreweaver Portal >
+                            </a>
+                        </div>
+                        <div class="flex justify-center items-center iframe-container">
+                            <iframe src="https://coreweaver-portal.vercel.app/" title="Coreweaver Portal Live Demo" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layer: Technical SEO & Site Health -->
+                <h3 class="text-3xl font-bold text-purple-400 mb-6 text-center md:text-left">Technical SEO & Site Health</h3>
+                <p class="text-gray-400 text-lg mb-8 text-center md:text-left max-w-3xl mx-auto md:mx-0">
+                    Building foundational systems for robust organic visibility and optimal user experience.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                    <!-- Project 1: Comprehensive Site Audit & Optimization -->
+                    <div class="glass-panel rounded-lg overflow-hidden transform transition duration-300 hover:shadow-2xl hover:shadow-purple-500/20 hover:-translate-y-1">
+                        <div class="canvas-container">
+                            <canvas class="quantum-canvas"></canvas> <!-- Retaining visual flair -->
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-white mb-2">Technical SEO Audit & Revamp</h3>
+                            <p class="text-gray-400 text-base mb-4">
+                                <strong>Challenge:</strong> A client's website faced severe indexation and crawl budget limitations, hindering organic visibility.
+                                <strong>Solution:</strong> Executed a comprehensive technical SEO audit utilizing Screaming Frog and Google Search Console. Identified and rectified critical issues including crawl errors, index bloat, and site speed bottlenecks.
+                                <strong>Impact:</strong> Achieved a substantial 30% reduction in crawl errors and significant improvements in site health scores, establishing a robust foundation for accelerated organic growth and improved search engine crawlability.
+                            </p>
+                            <a href="https://quantum-nexus-blond.vercel.app/" target="_blank" class="text-blue-400 hover:underline font-medium inline-flex items-center font-mono text-sm">
+                                View Project Details >
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Project 2: Core Web Vitals & Performance Improvement -->
+                    <div class="glass-panel rounded-lg overflow-hidden transform transition duration-300 hover:shadow-2xl hover:shadow-purple-500/20 hover:-translate-y-1">
+                        <div class="canvas-container">
+                            <canvas class="quantum-canvas"></canvas>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-white mb-2">Core Web Vitals Optimization</h3>
+                            <p class="text-gray-400 text-base mb-4">
+                                <strong>Challenge:</strong> Client site had low Core Web Vitals scores impacting user experience and rankings.
+                                <strong>Solution:</strong> Optimized site performance focusing on LCP, FID, and CLS through image optimization, code minification, and server response time improvements.
+                                <strong>Impact:</strong> Resulted in improved user experience (e.g., 0.5s faster LCP) and enhanced organic search rankings (e.g., 5-spot average rank increase for target keywords).
+                            </p>
+                            <a href="https://virtual-lighthouse-node.vercel.app/" target="_blank" class="text-blue-400 hover:underline font-medium inline-flex items-center font-mono text-sm">
+                                View Project Details >
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Project 3: Scalable Content Architecture -->
+                    <div class="glass-panel rounded-lg overflow-hidden transform transition duration-300 hover:shadow-2xl hover:shadow-purple-500/20 hover:-translate-y-1">
+                        <div class="canvas-container">
+                            <canvas class="quantum-canvas"></canvas>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-white mb-2">Scalable Content Infrastructure</h3>
+                            <p class="text-gray-400 text-base mb-4">
+                                <strong>Challenge:</strong> Client struggled with managing and indexing a rapidly expanding content library.
+                                <strong>Solution:</strong> Designed and implemented a scalable content architecture with optimized internal linking and schema markup for efficient data processing and improved indexation.
+                                <strong>Impact:</strong> Led to increased long-tail organic traffic by 20% and improved content discoverability.
+                            </p>
+                            <a href="https://athenax-c1.vercel.app/" target="_blank" class="text-blue-400 hover:underline font-medium inline-flex items-center font-mono text-sm">
+                                View Project Details >
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layer: Organic & Paid Campaign Optimization -->
+                <h3 class="text-3xl font-bold text-purple-400 mb-6 text-center md:text-left">Organic & Paid Campaign Optimization</h3>
+                <p class="text-gray-400 text-lg mb-8 text-center md:text-left max-w-3xl mx-auto md:mx-0">
+                    Developing advanced strategies for accelerated data discovery and maximizing conversion rates.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                    <!-- Project 4: High-Impact Keyword Strategy -->
+                    <div class="glass-panel rounded-lg overflow-hidden transform transition duration-300 hover:shadow-2xl hover:shadow-purple-500/20 hover:-translate-y-1">
+                        <div class="canvas-container">
+                            <canvas class="quantum-canvas"></canvas>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-white mb-2">High-Impact Keyword Strategy</h3>
+                            <p class="text-gray-400 text-base mb-4">
+                                <strong>Challenge:</strong> Client needed to identify untapped keyword opportunities for both organic and paid channels.
+                                <strong>Solution:</strong> Conducted in-depth keyword research using SEMRush and Google Keyword Planner to identify high-value organic and paid opportunities, targeting both short-tail and long-tail terms.
+                                <strong>Impact:</strong> Led to a 25% increase in qualified organic traffic and a 15% lower Cost Per Click (CPC) in Google Ads campaigns.
+                            </p>
+                            <a href="https://riip.vercel.app/" target="_blank" class="text-blue-400 hover:underline font-medium inline-flex items-center font-mono text-sm">
+                                View Project Details >
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Project 5: Google Ads Performance Enhancement -->
+                    <div class="glass-panel rounded-lg overflow-hidden transform transition duration-300 hover:shadow-2xl hover:shadow-purple-500/20 hover:-translate-y-1">
+                        <div class="canvas-container">
+                            <canvas class="quantum-canvas"></canvas>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-white mb-2">Google Ads ROI Optimization</h3>
+                            <p class="text-gray-400 text-base mb-4">
+                                <strong>Challenge:</strong> Client's Google Ads campaigns had high CPA and low ROAS.
+                                <strong>Solution:</strong> Optimized Google Ads campaigns by refining ad copy, audience targeting, negative keywords, and implementing advanced bid strategies (e.g., Target CPA, Maximize Conversions).
+                                <strong>Impact:</strong> Achieved a 30% increase in conversion rate and a 20% improvement in Return on Ad Spend (ROAS), significantly boosting campaign profitability.
+                            </p>
+                            <a href="https://autonomous-ascent.vercel.app/" target="_blank" class="text-blue-400 hover:underline font-medium inline-flex items-center font-mono text-sm">
+                                View Project Details >
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Project 6: Analytics & Reporting Dashboard -->
+                    <div class="glass-panel rounded-lg overflow-hidden transform transition duration-300 hover:shadow-2xl hover:shadow-purple-500/20 hover:-translate-y-1">
+                        <div class="canvas-container">
+                            <canvas class="quantum-canvas"></canvas>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-white mb-2">Google Analytics & SEMRush Insights</h3>
+                            <p class="text-gray-400 text-base mb-4">
+                                <strong>Challenge:</strong> Client lacked clear visibility into website performance and campaign effectiveness.
+                                <strong>Solution:</strong> Developed custom dashboards in Google Analytics (GA4) and leveraged SEMRush for comprehensive competitive analysis and performance reporting.
+                                <strong>Impact:</strong> Provided actionable insights that led to a 10% increase in overall website engagement and informed strategic content and advertising decisions.
+                            </p>
+                            <a href="https://athenax-gamma.vercel.app/" target="_blank" class="text-blue-400 hover:underline font-medium inline-flex items-center font-mono text-sm">
+                                View Project Details >
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Layer: Implementation & Client Communication -->
+                <h3 class="text-3xl font-bold text-purple-400 mb-6 text-center md:text-left">Implementation & Client Communication</h3>
+                <p class="text-gray-400 text-lg mb-8 text-center md:text-left max-w-3xl mx-auto md:mx-0">
+                    Crafting intuitive interfaces and robust coordination mechanisms for seamless digital marketing interaction.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project 7: Google Tag Manager Implementation -->
+                    <div class="glass-panel rounded-lg overflow-hidden transform transition duration-300 hover:shadow-2xl hover:shadow-purple-500/20 hover:-translate-y-1">
+                        <div class="canvas-container">
+                            <canvas class="quantum-canvas"></canvas>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-white mb-2">Google Tag Manager Deployment</h3>
+                            <p class="text-gray-400 text-base mb-4">
+                                <strong>Challenge:</strong> Inconsistent and unreliable tracking setup across various marketing channels.
+                                <strong>Solution:</strong> Implemented and managed Google Tag Manager containers for multiple clients, ensuring accurate tracking of conversions, events, and user behavior across platforms.
+                                <strong>Impact:</strong> Streamlined tag deployment, reducing reliance on developer resources by 40% and improving data accuracy for decision-making.
+                            </p>
+                            <a href="https://subnet63-quantum.vercel.app/" target="_blank" class="text-blue-400 hover:underline font-medium inline-flex items-center font-mono text-sm">
+                                View Project Details >
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Project 8: Client-Facing Performance Reporting -->
+                    <div class="glass-panel rounded-lg overflow-hidden transform transition duration-300 hover:shadow-2xl hover:shadow-purple-500/20 hover:-translate-y-1">
+                        <div class="canvas-container">
+                            <canvas class="quantum-canvas"></canvas>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-white mb-2">Client Performance Presentations</h3>
+                            <p class="text-gray-400 text-base mb-4">
+                                <strong>Challenge:</strong> Clients needed clear, concise updates on complex SEO/SEM performance.
+                                <strong>Solution:</strong> Developed and regularly presented comprehensive performance reports to clients and internal teams, translating complex data into clear, actionable strategies and insights.
+                                <strong>Impact:</strong> Fostered strong client relationships, increased client understanding of ROI, and facilitated data-driven strategic alignment.
+                            </p>
+                            <a href="https://terr-nine.vercel.app/" target="_blank" class="text-blue-400 hover:underline font-medium inline-flex items-center font-mono text-sm">
+                                View Project Details >
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Project 9: UTM Tracking & Attribution -->
+                    <div class="glass-panel rounded-lg overflow-hidden transform transition duration-300 hover:shadow-2xl hover:shadow-purple-500/20 hover:-translate-y-1">
+                        <div class="canvas-container">
+                            <canvas class="quantum-canvas"></canvas>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-white mb-2">UTM Campaign Tracking & ROI</h3>
+                            <p class="text-gray-400 text-base mb-4">
+                                <strong>Challenge:</strong> Difficulty in accurately attributing conversions to specific marketing channels.
+                                <strong>Solution:</strong> Developed and managed robust UTM tracking protocols across all digital campaigns (email, social, paid ads, etc.) to ensure granular data collection.
+                                <strong>Impact:</strong> Enabled precise attribution of traffic and conversions, providing clear ROI for marketing spend and optimizing budget allocation based on performance data.
+                            </p>
+                            <a href="https://reckonax.vercel.app/" target="_blank" class="text-blue-400 hover:underline font-medium inline-flex items-center font-mono text-sm">
+                                View Project Details >
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Live Feed Section: Real-time Performance Insights -->
+        <section id="insights" class="mt-16">
+            <h2 class="text-3xl font-bold text-center mb-6">📡 Real-time Performance Insights</h2>
+            <div id="live-feed" class="text-sm font-mono text-blue-300 bg-black/30 p-4 rounded-lg shadow-inner">
+                <!-- Populate dynamically via JavaScript -->
+                <p>Monitoring digital landscape... <span class="animate-pulse">_</span></p>
+            </div>
+        </section>
+
+        <!-- Contact Section: Professional Contact Form -->
+        <section id="contact" class="glass-panel p-8 md:p-12 rounded-xl shadow-2xl shadow-purple-500/10 mt-16">
+            <h2 class="text-4xl font-bold text-center text-white mb-8">Connect for Collaboration</h2>
+            <div class="max-w-2xl mx-auto">
+                <p class="text-center text-lg text-gray-300 mb-8">
+                    Let's discuss how I can elevate your organization's SEO/SEM experience. I am available for on-site roles in the Dallas/Fort Worth area and ready to start ASAP.
+                </p>
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-400 mb-1 font-mono">YOUR NAME</label>
+                        <input type="text" id="name" name="name" class="mt-1 block w-full px-4 py-2 bg-black/30 border border-blue-500/30 rounded-md shadow-sm focus:ring-blue-400 focus:border-blue-400 text-white" placeholder="Your Name" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-400 mb-1 font-mono">YOUR EMAIL</label>
+                        <input type="email" id="email" name="email" class="mt-1 block w-full px-4 py-2 bg-black/30 border border-blue-500/30 rounded-md shadow-sm focus:ring-blue-400 focus:border-blue-400 text-white" placeholder="mason.nguyen@example.com" required>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-400 mb-1 font-mono">YOUR MESSAGE</label>
+                        <textarea id="message" name="message" rows="5" class="mt-1 block w-full px-4 py-2 bg-black/30 border border-blue-500/30 rounded-md shadow-sm focus:ring-blue-400 focus:border-blue-400 text-white" placeholder="Tell me about your SEO/SEM needs..." required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="primary-button inline-flex justify-center py-3 px-8 rounded-full text-lg font-bold">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer: Professional links and copyright -->
+    <footer class="text-gray-500 py-10 text-sm border-t border-blue-500/10 mt-16">
+        <div class="container mx-auto text-center">
+            <!-- Footer Mission Statement -->
+            <h3 class="text-2xl font-bold mb-2 font-mono text-white">
+                <span class="text-blue-400">Driving Verifiable Digital Performance</span>
+            </h3>
+            <p class="mb-4 max-w-xl mx-auto text-gray-400">
+                Building interoperable systems for enhanced online visibility and real-time conversion optimization.
+            </p>
+
+            <!-- Quick Links -->
+            <div class="flex justify-center space-x-6 mb-6 text-base font-mono">
+                <a href="#casestudies" class="hover:text-blue-400 transition-colors">#casestudies</a>
+                <a href="#insights" class="hover:text-blue-400 transition-colors">#insights</a>
+                <a href="#about" class="hover:text-blue-400 transition-colors">#about</a>
+                <a href="#skills" class="hover:text-blue-400 transition-colors">#expertise</a>
+            </div>
+
+            <!-- Social/Professional Links -->
+            <div class="flex justify-center space-x-6 mb-6">
+                <!-- GitHub Icon -->
+                <a href="https://github.com/virtualmase" target="_blank" class="text-gray-400 hover:text-blue-400 transition-colors text-2xl" aria-label="GitHub Profile">
+                    <svg class="w-6 h-6 inline-block" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577V20.08c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.835 2.809 1.305 3.493.998.108-.777.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.562 21.808 24 17.302 24 12c0-6.627-5.373-12-12-12z" clip-rule="evenodd"/></svg>
+                </a>
+                <!-- LinkedIn Icon (updated to Mason Nguyen's LinkedIn) -->
+                <a href="https://www.linkedin.com/in/mason-nguyen/" target="_blank" class="text-gray-400 hover:text-blue-400 transition-colors text-2xl" aria-label="LinkedIn Profile">
+                    <svg class="w-6 h-6 inline-block" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.518v-5.604c0-1.339-.023-3.061-1.864-3.061-1.867 0-2.156 1.458-2.156 2.964v5.601H9.38V9.38h3.38v1.463h.045c.472-.897 1.623-1.864 3.336-1.864 3.57 0 4.233 2.351 4.233 6.417v7.356zM5.495 7.972c-1.012 0-1.832-.82-1.832-1.832s.82-1.832 1.832-1.832 1.832.82 1.832 1.832-.82 1.832-1.832 1.832zm1.832 12.48h-3.664V9.38h3.664v11.072zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.454c.979 0 1.771-.773 1.771-1.729V1.729C24 .774 23.208 0 22.225 0z"/></svg>
+                </a>
+                <!-- Email Icon (updated to a generic placeholder for Mason) -->
+                <a href="mailto:mason.nguyen@example.com" class="text-gray-400 hover:text-blue-400 transition-colors text-2xl" aria-label="Email Mason Nguyen">
+                    <svg class="w-6 h-6 inline-block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12.713l-11.75 7.287c-.156.096-.25.26-.25.44v1.56c0 .552.448 1 1 1h22c.552 0 1-.448 1-1v-1.56c0-.18-.094-.344-.25-.44L12 12.713z"/><path d="M23.75 4.56c0-.18-.094-.344-.25-.44L12 11.287 .25 4.12c-.156-.096-.25-.26-.25-.44V2.56c0-.552.448-1 1-1h22c.552 0 1 .448 1 1v1.56z"/></svg>
+                </a>
+            </div>
+
+            <!-- Call to Action -->
+            <p class="text-blue-300 text-lg font-mono mb-4">
+                → Let's connect and elevate your digital presence.
+            </p>
+
+            <!-- Versioning Metadata -->
+            <p class="text-gray-500 mt-4">v1.1 · Last updated: June 2025</p>
+            <p class="text-gray-500 mt-2">&copy; 2025 Mason Nguyen. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- Canvas Animation Setup ---
+        // Select all canvas elements that need animation
+        const canvases = document.querySelectorAll('.quantum-canvas');
+
+        // Function to set canvas dimensions responsively based on its parent container
+        function setCanvasDimensions(canvas) {
+            const container = canvas.parentElement;
+            canvas.width = container.clientWidth;
+            canvas.height = container.clientHeight;
+        }
+
+        // Unified animation function for all canvases, creating a subtle visual effect
+        function createQuantumNodeAnimation(canvas) {
+            const ctx = canvas.getContext('2d');
+            setCanvasDimensions(canvas); // Initial dimension setup
+
+            let particles = [];
+            const particleCount = 20; // Number of animated particles
+            // Initialize particles with random positions and velocities
+            for (let i = 0; i < particleCount; i++) {
+                particles.push({
+                    x: (Math.random() - 0.5) * canvas.width,
+                    y: (Math.random() - 0.5) * canvas.height,
+                    vx: (Math.random() - 0.5) * 0.5, // X velocity
+                    vy: (Math.random() - 0.5) * 0.5, // Y velocity
+                    radius: Math.random() * 1.5 + 0.5 // Random radius for variety
+                });
+            }
+
+            let frame = 0; // Animation frame counter
+
+            function animate() {
+                // Recalculate dimensions on each frame to ensure responsiveness
+                setCanvasDimensions(canvas);
+                const currentCenterX = canvas.width / 2;
+                const currentCenterY = canvas.height / 2;
+
+                ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas for redraw
+                frame++;
+
+                // Draw connecting lines from center to particles, creating a network effect
+                ctx.strokeStyle = 'rgba(0, 191, 255, 0.2)'; // Light blue, semi-transparent
+                ctx.lineWidth = 0.5;
+                particles.forEach(p => {
+                    ctx.beginPath();
+                    ctx.moveTo(currentCenterX, currentCenterY);
+                    ctx.lineTo(p.x, p.y);
+                    ctx.stroke();
+                });
+
+                // Update particle positions and draw them
+                particles.forEach(p => {
+                    p.x += p.vx;
+                    p.y += p.vy;
+
+                    // Reverse velocity if particle hits canvas boundaries
+                    if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+                    if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(138, 43, 226, 0.7)`; // Purple color for particles
+                    ctx.fill();
+                });
+
+                // Draw central pulsing core for visual focus
+                const pulseScale = 0.8 + Math.sin(frame * 0.05) * 0.2; // Pulsing scale effect
+                const pulseAlpha = 0.7 + Math.sin(frame * 0.05) * 0.3; // Pulsing alpha effect
+
+                // Outer pulse circle
+                ctx.beginPath();
+                ctx.arc(currentCenterX, currentCenterY, 15 * pulseScale, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(0, 191, 255, ${pulseAlpha * 0.2})`;
+                ctx.fill();
+
+                // Inner core circle with glow
+                ctx.beginPath();
+                ctx.arc(currentCenterX, currentCenterY, 5, 0, Math.PI * 2);
+                ctx.fillStyle = 'rgba(0, 191, 255, 0.9)'; // Blue
+                ctx.shadowColor = 'rgba(0, 191, 255, 1)';
+                ctx.shadowBlur = 15;
+                ctx.fill();
+                ctx.shadowBlur = 0; // Reset shadow to avoid affecting other draws
+
+                requestAnimationFrame(animate); // Request next animation frame
+            }
+            animate(); // Start the animation loop
+        }
+
+        // Initialize animation for each canvas found on the page
+        canvases.forEach(createQuantumNodeAnimation);
+
+        // Handle window resize event to update canvas dimensions
+        window.addEventListener('resize', () => {
+            canvases.forEach(canvas => {
+                setCanvasDimensions(canvas); // Simply resize, animation loop will redraw
+            });
+        });
+
+        // --- Live Feed Simulation ---
+        const liveFeedElement = document.getElementById('live-feed');
+        // Array of SEO/SEM related signals to display
+        const signals = [
+            "INIT: Google Analytics tracking online and verified...",
+            "SYNC: Google Ads campaign performance stable. CPA: $1.20.",
+            "ALERT: SEMRush detected new competitor keywords (analyzing).",
+            "LOG: Organic traffic increased by 15% last month (report generated).",
+            "STATUS: Google Tag Manager containers fully deployed. All tags firing.",
+            "DATA: Conversion rate optimized to 3.5% (A/B test successful).",
+            "TXN: Client reporting meeting scheduled. Key KPIs ready for presentation.",
+            "NETWORK: Backlink profile audit complete. Disavow list updated.",
+            "VISUAL: New SEO dashboard rendering in Data Studio.",
+            "SECURE: UTM tracking parameters verified for all active campaigns."
+        ];
+        let signalIndex = 0; // Current signal to display
+
+        // Function to update the live feed content
+        function updateLiveFeed() {
+            if (liveFeedElement) {
+                liveFeedElement.innerHTML = `<p>${signals[signalIndex]}</p>`;
+                signalIndex = (signalIndex + 1) % signals.length; // Cycle through signals
+            }
+        }
+
+        // Update feed every 3 seconds
+        setInterval(updateLiveFeed, 3000);
+        // Initial feed update on page load
+        updateLiveFeed();
+    </script>
+</body>
+</html>
